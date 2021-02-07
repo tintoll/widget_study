@@ -12,6 +12,7 @@ import 'package:widget_study/widget_row.dart';
 import 'package:widget_study/widget_single_child_scroll_view.dart';
 import 'package:widget_study/widget_stack.dart';
 import 'package:widget_study/widget_tab.dart';
+import 'package:widget_study/widget_textfield.dart';
 
 void main() {
   runApp(MyApp());
@@ -194,7 +195,19 @@ class WidgetList extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => WidgetEtc()),
                 );
               },
-              title: Text('Image, Icon, Progress, CircleAvater'),
+              title: Text('Image, Icon, Progress, CircleAvatar'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetTextField()),
+                );
+              },
+              title: Text('TextField'),
             ),
           ],
         ));
