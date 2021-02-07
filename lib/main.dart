@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_study/widget_bottome_navigation_bar.dart';
+import 'package:widget_study/widget_buttons.dart';
 import 'package:widget_study/widget_card.dart';
 import 'package:widget_study/widget_column.dart';
 import 'package:widget_study/widget_container.dart';
@@ -169,6 +170,18 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('Card, Center, SizedBox, Padding'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetButtons()),
+                );
+              },
+              title: Text('Buttons'),
             ),
           ],
         ));
