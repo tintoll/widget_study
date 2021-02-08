@@ -9,6 +9,7 @@ import 'package:widget_study/widget_etc.dart';
 import 'package:widget_study/widget_grid_view.dart';
 import 'package:widget_study/widget_list_view.dart';
 import 'package:widget_study/widget_page_view.dart';
+import 'package:widget_study/widget_radio.dart';
 import 'package:widget_study/widget_row.dart';
 import 'package:widget_study/widget_single_child_scroll_view.dart';
 import 'package:widget_study/widget_stack.dart';
@@ -221,6 +222,18 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('Checkbox/Switch'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetRadio()),
+                );
+              },
+              title: Text('Radio'),
             ),
           ],
         ));
