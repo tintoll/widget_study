@@ -16,12 +16,16 @@ class WidgetButtons extends StatelessWidget {
                 // 실행될 코드
                 showDialog(
                   context: context,
+                  barrierDismissible: false,
                   builder: (context) {
                     return AlertDialog(
                       title: Text('타이틀'),
                       content: SingleChildScrollView(
-                        child: ListView(
-                          children: [Text('콘텐츠 영억입니다.'), Text('OK를 누르면 닫힙니다.')],
+                        child: ListBody(
+                          children: [
+                            Text('콘텐츠 영억입니다.'),
+                            Text('OK를 누르면 닫힙니다.')
+                          ],
                         ),
                       ),
                       actions: [
@@ -34,7 +38,7 @@ class WidgetButtons extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text('OK')),
+                            child: Text('Cancel')),
                       ],
                     );
                   },
