@@ -7,6 +7,7 @@ class WidgetButtons extends StatefulWidget {
 
 class _WidgetButtonsState extends State<WidgetButtons> {
   DateTime _selectedTime;
+  String _selectedTimeOfDay;
 
   @override
   Widget build(BuildContext context) {
@@ -78,10 +79,19 @@ class _WidgetButtonsState extends State<WidgetButtons> {
               iconSize: 100.0,
               onPressed: () {
                 // 실행될 코드
+                Future<TimeOfDay> selectedTime = showTimePicker(context: context, initialTime: TimeOfDay.now());
+                selectedTime.then((timeOfDay){
+                  setState(() {
+                    _selectedTimeOfDay = '${timeOfDay.hour}:${timeOfDay.minute}';
+                  });
+                });
+
+
               }),
           FloatingActionButton(child: Icon(Icons.add), onPressed: () {},
           ),
-          Text('$_selectedTime')
+          Text('$_selectedTime'),
+          Text('$_selectedTimeOfDay'),
         ],
       ),
     );
