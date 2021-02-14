@@ -9,6 +9,7 @@ import 'package:widget_study/widget_dropdown.dart';
 import 'package:widget_study/widget_etc.dart';
 import 'package:widget_study/widget_event.dart';
 import 'package:widget_study/widget_grid_view.dart';
+import 'package:widget_study/widget_hero.dart';
 import 'package:widget_study/widget_list_view.dart';
 import 'package:widget_study/widget_page_view.dart';
 import 'package:widget_study/widget_radio.dart';
@@ -259,7 +260,19 @@ class WidgetList extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => WidgetEvent()),
                 );
               },
-              title: Text('Evenet'),
+              title: Text('Event'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetHero()),
+                );
+              },
+              title: Text('Hero'),
             ),
           ],
         ));
