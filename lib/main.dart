@@ -7,6 +7,7 @@ import 'package:widget_study/widget_column.dart';
 import 'package:widget_study/widget_container.dart';
 import 'package:widget_study/widget_dropdown.dart';
 import 'package:widget_study/widget_etc.dart';
+import 'package:widget_study/widget_event.dart';
 import 'package:widget_study/widget_grid_view.dart';
 import 'package:widget_study/widget_list_view.dart';
 import 'package:widget_study/widget_page_view.dart';
@@ -247,6 +248,18 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('Dropdown'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetEvent()),
+                );
+              },
+              title: Text('Evenet'),
             ),
           ],
         ));
