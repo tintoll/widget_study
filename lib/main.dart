@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_study/widget_animated_container.dart';
 import 'package:widget_study/widget_bottome_navigation_bar.dart';
 import 'package:widget_study/widget_buttons.dart';
 import 'package:widget_study/widget_card.dart';
@@ -273,6 +274,18 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('Hero'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetAnimatedContainer()),
+                );
+              },
+              title: Text('AnimatedContainer'),
             ),
           ],
         ));
