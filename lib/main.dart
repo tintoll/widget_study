@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_study/cupertino.dart';
 import 'package:widget_study/widget_Sliver.dart';
 import 'package:widget_study/widget_SliverList.dart';
 import 'package:widget_study/widget_animated_container.dart';
@@ -312,6 +313,18 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('SliverList'),
+            ),
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CupertinoWidget()),
+                );
+              },
+              title: Text('Cupertino 디자인'),
             ),
           ],
         ));
