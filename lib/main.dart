@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_study/cupertino.dart';
+import 'package:widget_study/navi_page.dart';
 import 'package:widget_study/widget_Sliver.dart';
 import 'package:widget_study/widget_SliverList.dart';
 import 'package:widget_study/widget_animated_container.dart';
@@ -22,6 +23,8 @@ import 'package:widget_study/widget_single_child_scroll_view.dart';
 import 'package:widget_study/widget_stack.dart';
 import 'package:widget_study/widget_tab.dart';
 import 'package:widget_study/widget_textfield.dart';
+
+import 'Person.dart';
 
 void main() {
   runApp(MyApp());
@@ -325,6 +328,20 @@ class WidgetList extends StatelessWidget {
                 );
               },
               title: Text('Cupertino 디자인'),
+            ),
+
+            Divider(
+              height: 1,
+            ),
+            ListTile(
+              onTap: () async {
+                final Person returnPerson = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NaviPage(person: Person('홍길동',10))),
+                );
+                print(returnPerson.name);
+              },
+              title: Text('내비게이션'),
             ),
           ],
         ));
