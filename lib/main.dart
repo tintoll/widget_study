@@ -27,6 +27,7 @@ import 'package:widget_study/widget_textfield.dart';
 import 'Person.dart';
 
 void main() {
+  // flutter 시작점
   runApp(MyApp());
 }
 
