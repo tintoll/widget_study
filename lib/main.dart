@@ -28,6 +28,8 @@ import 'Person.dart';
 
 void main() {
   // flutter 시작점
+  // test
+
   runApp(MyApp());
 }
 
